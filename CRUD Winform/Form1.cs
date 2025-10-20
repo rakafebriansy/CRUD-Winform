@@ -70,5 +70,10 @@ namespace CRUD_Winform
         {
             textBox2.UseSystemPasswordChar = !textBox2.UseSystemPasswordChar;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
