@@ -27,21 +27,6 @@ namespace CRUD_Winform
             _Username = textBox1.Text;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if(_Password != _ConfirmPassword)
@@ -74,6 +59,13 @@ namespace CRUD_Winform
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblsdhakun_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
         }
     }
 }

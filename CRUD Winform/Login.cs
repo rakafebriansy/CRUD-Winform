@@ -21,20 +21,24 @@ namespace CRUD_Winform
         {
             string Username = TBUsername.Text;
             string Password = TBPassword.Text;
-
-            Dashboard dashboard = new Dashboard(Username,Password);
-            this.Hide();
-            dashboard.Show();
+            if (Username == User.Username && Password == User.Password)
+            {
+                Dashboard dashboard = new Dashboard(Username, Password);
+                this.Hide();
+                dashboard.Show();
+            }
+            else
+            {
+                MessageBox.Show("Password dan Username Tidak Sesuai", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblregister_Click(object sender, EventArgs e)
         {
-           
+           Form1 form1 = new Form1();
+            this.Hide();
+            form1.Show();
         }
     }
 }
